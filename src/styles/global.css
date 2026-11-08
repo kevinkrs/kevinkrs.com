@@ -1,5 +1,11 @@
 @import '@fontsource-variable/geist';
 
+/* Charis SIL (OFL, files in public/fonts): a Charter-family serif, the closest open match to leerob's Iowan Old Style. */
+@font-face { font-family: 'Charis SIL'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/charis-sil-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Charis SIL'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/charis-sil-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Charis SIL'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/charis-sil-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Charis SIL'; font-style: italic; font-weight: 700; font-display: swap; src: url('/fonts/charis-sil-latin-700-italic.woff2') format('woff2'); }
+
 /* Restrained: cool neutral ground, one ink-blue accent. Light by default
    (daytime, office laptop); dark follows the visitor's system setting. */
 :root {
@@ -10,6 +16,7 @@
   --accent: #2a5bd7;
   --accent-soft: #2a5bd71f;
   --font: 'Geist Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --serif: 'Charis SIL', 'Palatino Linotype', Palatino, Georgia, serif;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   color-scheme: light;
 }
@@ -39,12 +46,12 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font: 400 1rem/1.65 var(--font);
+  font: 400 1.0625rem/1.65 var(--serif);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 ::selection { background: var(--accent-soft); color: var(--fg); }
-h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 600; }
+h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 700; }
 p { margin: 0; text-wrap: pretty; }
 a {
   color: inherit;
