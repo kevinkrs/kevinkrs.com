@@ -11,9 +11,9 @@ export const profile = {
 };
 
 export const intro = [
-  'I love building things, from a first idea to something real people use.',
-  'I’ve been curious about AI systems since my undergrad studies. Now agentic AI is taking over the world, and I build with it every day.',
-  'Right now I’m reading about AI ethics and security.',
+  'I love building things. Give me a rough idea and I want to see it working, used by real people.',
+  'AI systems have had my curiosity since my undergrad days in Karlsruhe, through Seoul and Hamburg. Since then I’ve built a voice assistant for beekeepers and agentic pipelines for MedTech. Now agentic AI is taking over the world, and I get to build with it every day.',
+  'Lately I’m reading about AI ethics and security: what we owe the people these systems act for.',
 ];
 
 export const services = [

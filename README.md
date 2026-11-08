@@ -19,3 +19,4 @@ DNS at your registrar: `A` records for `kevinkrs.com` → 185.199.108.153, 185.1
 ## Before going live
 - Replace placeholder rows in `src/data/site.ts` (experience, education).
 - Fill in `src/pages/impressum/index.astro`.
+- Decide on a Datenschutz page: GitHub Pages logs visitor IPs, which may require a short privacy notice naming GitHub as host.
