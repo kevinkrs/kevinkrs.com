@@ -1,0 +1,127 @@
+---
+import Base from '../layouts/Base.astro';
+import Harbor from '../components/Harbor.astro';
+import { profile, intro, services, experience, education, type Row } from '../data/site';
+
+const lists: { id: string; title: string; rows: Row[] }[] = [
+  { id: 'experience', title: 'Experience', rows: experience },
+  { id: 'education', title: 'Education', rows: education },
+];
+const year = new Date().getFullYear();
+---
+
+<Base
+  title={`${profile.name} · ${profile.role}`}
+  description={`${profile.name}, freelance ${profile.role} in ${profile.location}. ${profile.pitch}`}
+>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="shell">
+    <main class="copy" id="content">
+      <h1 class="site-title"><span class="at">@</span>kevinkrs</h1>
+
+      <section class="bio" aria-label="About">
+        <div class="bar"><span>{profile.name} · {profile.role}</span><span>{profile.location}</span></div>
+        {intro.map((p) => <p>{p}</p>)}
+        <p class="links">
+          <a class="cta" href={`mailto:${profile.email}`}>{profile.email}</a>
+          <a href={profile.linkedin} rel="noopener">LinkedIn</a>
+          <a href={profile.github} rel="noopener">GitHub</a>
+        </p>
+      </section>
+
+      <section aria-labelledby="services-title">
+        <h2 id="services-title">What I do</h2>
+        <div class="list">
+          {services.map((s) => (
+            <div class="item"><span>{s.title}</span><span class="meta">{s.text}</span></div>
+          ))}
+        </div>
+      </section>
+
+      {lists.map((l) => (
+        <section aria-labelledby={`${l.id}-title`}>
+          <h2 id={`${l.id}-title`}>{l.title}</h2>
+          <div class="list">
+            {l.rows.map((r) => (
+              <div class="item">
+                <span>{r.org}</span>
+                <span class="meta">{r.title} · {r.location}</span>
+                {r.note && <span class="note">{r.note}</span>}
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">Get in touch</h2>
+        <p>Have an idea, a product to scale, or a question about AI in your business? Write me a short email.</p>
+        <p><a class="cta" href={`mailto:${profile.email}`}>{profile.email}</a></p>
+      </section>
+
+      <footer class="foot">
+        <span>© {year} {profile.name}</span>
+        <a href="/impressum/">Impressum</a>
+        <a href="/datenschutz/">Datenschutz</a>
+      </footer>
+    </main>
+
+    <aside class="visual"><Harbor /></aside>
+  </div>
+</Base>
+
+<style>
+  .shell { --pad: clamp(1.25rem, 3.4vw, 3.25rem); padding: 2.5rem var(--pad) 3rem; }
+  .copy { max-width: 600px; margin-inline: auto; min-width: 0; overflow-wrap: break-word; }
+  .copy p { margin: 0 0 1.45rem; }
+
+  .site-title { font-size: clamp(2.2rem, 3.5vw, 2.65rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 0.9em; }
+  .at { font-size: 1.1em; margin-right: 0.015em; }
+
+  .bio { margin-bottom: 3.25rem; display: block; }
+  .bar {
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    border-bottom: 1px solid var(--rule); color: var(--muted);
+    font-size: 0.875rem; padding-bottom: 0.55rem; margin-bottom: 1.35rem;
+  }
+  .links { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-bottom: 0; }
+  .links a:not(.cta) { color: var(--muted); }
+  .cta { color: var(--accent); font-weight: 500; }
+
+  section { margin-top: 3.5rem; }
+  .bio { margin-top: 0; }
+  h2 { font-size: 1.45rem; letter-spacing: -0.02em; line-height: 1.4; margin: 0 0 1.2rem; }
+
+  .list { border-top: 1px solid var(--rule); }
+  .item {
+    display: grid; gap: 0.15rem; padding: 0.72em 0; border-bottom: 1px solid var(--rule);
+    transition: opacity 0.3s ease-in-out;
+  }
+  .list:hover .item { opacity: 0.8; }
+  .list:hover .item:hover { opacity: 1; }
+  .meta { color: var(--muted); font-size: 0.875rem; }
+  .note { color: var(--muted); font-size: 0.9375rem; margin-top: 0.25rem; }
+
+  .foot {
+    display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 3.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--rule); font-size: 0.8125rem; color: var(--muted);
+  }
+  .foot a { text-decoration: none; }
+
+  .visual { display: none; }
+
+  @media (min-width: 1024px) {
+    .shell {
+      display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(380px, 1fr);
+      gap: clamp(2rem, 3.6vw, 3.75rem); align-items: start;
+      max-width: 1500px; margin-inline: auto; padding-block: var(--pad);
+    }
+    .copy { padding-block: 1.5rem; }
+    .visual {
+      display: block; position: sticky; top: var(--pad);
+      height: calc(100svh - 2 * var(--pad)); min-height: min(72svh, 760px);
+      border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; isolation: isolate;
+      background: var(--rule);
+    }
+  }
+</style>
