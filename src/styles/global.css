@@ -1,0 +1,63 @@
+@import '@fontsource-variable/geist';
+
+/* Restrained: cool neutral ground, one ink-blue accent. Light by default
+   (daytime, office laptop); dark follows the visitor's system setting. */
+:root {
+  --bg: #fbfbfc;
+  --fg: #16181d;
+  --muted: #5b616d;
+  --rule: #e3e5ea;
+  --accent: #2a5bd7;
+  --accent-soft: #2a5bd71f;
+  --font: 'Geist Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1013;
+    --fg: #e8eaee;
+    --muted: #98a0ac;
+    --rule: #24272e;
+    --accent: #8db0ff;
+    --accent-soft: #8db0ff26;
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--rule) transparent;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1rem/1.65 var(--font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--accent-soft); color: var(--fg); }
+h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 600; }
+p { margin: 0; text-wrap: pretty; }
+a {
+  color: inherit;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 0.2s var(--ease-out), text-decoration-color 0.2s var(--ease-out);
+}
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+.skip {
+  position: absolute; left: 16px; top: -100px; padding: 8px 12px;
+  background: var(--fg); color: var(--bg); border-radius: 6px; z-index: 10;
+}
+.skip:focus { top: 16px; }
