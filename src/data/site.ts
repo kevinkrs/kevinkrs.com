@@ -14,7 +14,6 @@ export const intro = [
   "As an engineer and builder, turned my love for creating things into my job a couple of years ago. From rough idea to a working prototype to a fully fledged product – I've cycled through this process many times in the last couple of years and I'm still fascinated by it every time I start something new. In times of AI the possibilities are sheer unlimited and I'm quite keen to find out what comes next.",
   "Machine Learning and Artificial Intelligence have had my curiosity since my undergrad days in Karlsruhe, through Seoul and Hamburg. Since then I’ve build expertise throughout ML and for the last two years in agentic AI systems leveraging the power LLM's.",
   "Agentic AI is taking over the world and reshaping industries, and I'm happy I get to build with it every day.",
-  "Latest reads: ",
 ];
 
 export const services = [
