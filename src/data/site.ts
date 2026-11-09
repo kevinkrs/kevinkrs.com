@@ -11,9 +11,10 @@ export const profile = {
 };
 
 export const intro = [
-  'I love building things. Give me a rough idea and I want to see it working, used by real people.',
-  'AI systems have had my curiosity since my undergrad days in Karlsruhe, through Seoul and Hamburg. Since then I’ve built a voice assistant for beekeepers and agentic pipelines for MedTech. Now agentic AI is taking over the world, and I get to build with it every day.',
-  'Lately I’m reading about AI ethics and security: what we owe the people these systems act for.',
+  "As an engineer and builder, turned my love for creating things into my job a couple of years ago. From rough idea to a working prototype to a fully fledged product – I've cycled through this process many times in the last couple of years and I'm still fascinated by it every time I start something new. In times of AI the possibilities are sheer unlimited and I'm quite keen to find out what comes next.",
+  "Machine Learning and Artificial Intelligence have had my curiosity since my undergrad days in Karlsruhe, through Seoul and Hamburg. Since then I’ve build expertise throughout ML and for the last two years in agentic AI systems leveraging the power LLM's.",
+  "Agentic AI is taking over the world and reshaping industries, and I'm happy I get to build with it every day.",
+  "Latest reads: ",
 ];
 
 export const services = [
@@ -26,8 +27,8 @@ export const services = [
     text: 'Your product works and is growing. I help your team take it further.',
   },
   {
-    title: 'AI that does real work',
-    text: 'I build AI agents into your systems and make sure your team can rely on them.',
+    title: "AI that get's shit done",
+    text: 'Unsure about how to leverage newest tech in your idea or product? Let me help turn an idea into a trustworthy AI pipeline fully integrated into your exisiting tech landscape.',
   },
 ];
 
@@ -41,7 +42,7 @@ export const experience: Row[] = [
   },
   {
     org: 'HIVESOUND GmbH', title: 'Co-Founder & AI Lead', location: 'Hamburg',
-    note: 'Built a voice AI assistant for beekeepers, bootstrapped the idea, won the AI Ideation, EXIST and InnoFounder scholarships, and now serves 1,000+ beekeepers.',
+    note: 'Built a voice AI assistant for beekeepers, bootstrapped the idea, won the AI Ideation, EXIST and InnoFounder scholarships, and now serves 1,000+ beekeepers. Trained anomaly detection models based on datasets of bee buzzing.',
   },
   {
     org: 'UKE', title: 'Scientific Research Assistant', location: 'Hamburg',
