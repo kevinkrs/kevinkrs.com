@@ -32,7 +32,7 @@ Kevin combines a strong educational background, real experience shipping product
 - Not offered as a headline service: DevOps (removed by request), generic "backbone"/ramp-up framing (rejected).
 - Experience list shows only company, position and location. No years or details; it exists to build trust.
 - Single page now; blog to follow later.
-- German business site: Impressum is required. No Datenschutz page: the site collects no data (fonts are self-hosted, no analytics).
+- German business site: Impressum and a short Datenschutz page (GitHub Pages hosting logs, email contact; no cookies or analytics).
 
 ## Brand Commitments
 
