@@ -11,8 +11,8 @@ export const profile = {
 };
 
 export const intro = [
-  "As an engineer and builder, turned my love for creating things into my job a couple of years ago. From rough idea to a working prototype to a fully fledged product – I've cycled through this process many times in the last couple of years and I'm still fascinated by it every time I start something new. In times of AI the possibilities are sheer unlimited and I'm quite keen to find out what comes next.",
-  "Machine Learning and Artificial Intelligence have had my curiosity since my undergrad days in Karlsruhe, through Seoul and Hamburg. Since then I’ve build expertise throughout ML and for the last two years in agentic AI systems leveraging the power LLM's.",
+  "As an engineer and builder, I turned my love for creating things into my job a couple of years ago. From rough idea to a working prototype to a fully fledged product – I've cycled through this process many times in the last couple of years and I'm still fascinated by it every time I start something new. In times of AI the possibilities are nearly unlimited and I'm quite keen to find out what comes next.",
+  "Machine Learning and Artificial Intelligence have had my curiosity since my undergrad days in Karlsruhe, through Seoul and Hamburg. Since then I’ve built expertise throughout ML and for the last two years in agentic AI systems leveraging the power of LLMs.",
   "Agentic AI is taking over the world and reshaping industries, and I'm happy I get to build with it every day.",
 ];
 
@@ -26,8 +26,8 @@ export const services = [
     text: 'Your product works and is growing. I help your team take it further.',
   },
   {
-    title: "AI that get's shit done",
-    text: 'Unsure about how to leverage newest tech in your idea or product? Let me help turn an idea into a trustworthy AI pipeline fully integrated into your exisiting tech landscape.',
+    title: "AI that gets shit done",
+    text: 'Unsure how to leverage the newest tech in your idea or product? Let me help turn an idea into a trustworthy AI pipeline fully integrated into your existing tech landscape.',
   },
 ];
 
