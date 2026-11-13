@@ -48,6 +48,7 @@ const year = new Date().getFullYear();
                 <span>{r.org}</span>
                 <span class="meta">{r.title} · {r.location}</span>
                 {r.note && <span class="note">{r.note}</span>}
+                {r.stack && <span class="meta stack">{r.stack.join(' · ')}</span>}
               </div>
             ))}
           </div>
@@ -103,6 +104,7 @@ const year = new Date().getFullYear();
   .list:hover .item:hover { opacity: 1; }
   .meta { color: var(--muted); font-family: var(--font); font-size: 0.8125rem; }
   .note { color: var(--muted); font-size: 0.9375rem; margin-top: 0.25rem; }
+  .stack { margin-top: 0.25rem; }
 
   .foot {
     display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 3.5rem; padding-top: 1.5rem;
