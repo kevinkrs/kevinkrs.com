@@ -18,16 +18,16 @@ export const intro = [
 
 export const services = [
   {
-    title: 'From idea to software',
-    text: 'You have an idea. I build it into a product people actually use, end to end. Like PLANIT//PRIMA, a data protection platform, and HIVESOUND, a voice assistant now serving 1,000+ beekeepers.',
-  },
-  {
-    title: 'Scaling your software',
-    text: 'Your product works and is growing. I help your team take it further.',
+    title: 'Full-Stack Software Development',
+    text: 'From rough idea to a product people actually use, end to end with Vue.js, React and Python. Like PLANIT//PRIMA, a data protection platform, and HIVESOUND, a voice assistant now serving 1,000+ beekeepers.',
   },
   {
     title: "AI that gets shit done",
-    text: 'AI in production, not in a slide deck. I trained ML models on real-world data at UKE and HIVESOUND, and shipped agentic pipelines to production at HIVESOUND and BCG Platinion. I build yours into your existing tech landscape.',
+    text: 'AI in production, not in a slide deck. I trained ML models on real-world data at UKE and HIVESOUND, and shipped agentic pipelines to production at HIVESOUND and BCG Platinion.',
+  },
+  {
+    title: 'Ship it to production',
+    text: "Code only counts once it's live. I bring systems into production on GCP and Azure and keep them running, from HIVESOUND's voice assistant to agentic pipelines at BCG Platinion.",
   },
 ];
 
