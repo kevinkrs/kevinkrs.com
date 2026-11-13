@@ -23,11 +23,11 @@ export const services = [
   },
   {
     title: "AI that gets shit done",
-    text: 'AI in production, not in a slide deck. I trained ML models on real-world data at UKE and HIVESOUND, and shipped agentic pipelines to production at HIVESOUND and BCG Platinion.',
+    text: 'AI in production, not in a demo. I trained ML models on real-world data at UKE and HIVESOUND, and shipped agentic pipelines to production at HIVESOUND and BCG Platinion.',
   },
   {
     title: 'Ship it to production',
-    text: "Code only counts once it's live. I bring systems into production on GCP and Azure and keep them running, from HIVESOUND's voice assistant to agentic pipelines at BCG Platinion.",
+    text: "I bring code live for real users on GCP and Azure. I shipped and run HIVESOUND's voice assistant, and took agentic pipelines into production at BCG Platinion.",
   },
 ];
 
