@@ -11,9 +11,8 @@ export const profile = {
 };
 
 export const intro = [
-  "As an engineer and builder, I turned my love for creating things into my job a couple of years ago. From rough idea to a working prototype to a fully fledged product – I've cycled through this process many times in the last couple of years and I'm still fascinated by it every time I start something new. In times of AI the possibilities are nearly unlimited and I'm quite keen to find out what comes next.",
-  "Machine Learning and Artificial Intelligence have had my curiosity since my undergrad days in Karlsruhe, through Seoul and Hamburg. Since then I’ve built expertise throughout ML and for the last two years in agentic AI systems leveraging the power of LLMs.",
-  "Currently, I work full-time as a freelance engineer.",
+  "I'm an engineer who turned a love for building things into a job. From rough idea to prototype to a product people use, I've been through that cycle many times, and starting something new still excites me every time. Today I do it full-time as a freelance engineer.",
+  "My path into AI started during my undergrad in Karlsruhe and took me through Seoul to Hamburg. Along the way I built deep expertise in machine learning, and for the last two years I've focused on agentic AI systems built on LLMs. With AI, what a small team can build keeps growing, and I'm keen to see what comes next.",
 ];
 
 export const services = [
