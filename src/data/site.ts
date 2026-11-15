@@ -47,7 +47,7 @@ export const experience: Row[] = [
   },
   {
     org: 'PLANIT//PRIMA', title: 'Freelance Full-Stack Developer', location: 'Hamburg', url: 'https://www.planitprima.com/de/',
-    note: 'Co-developed a data protection platform, from first prototype to product.',
+    note: 'Co-developed a data protection platform, from prototype to product.',
     stack: ['Vue.js', 'Python'],
   },
   {
