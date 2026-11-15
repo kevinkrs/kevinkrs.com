@@ -19,7 +19,6 @@ export const services = [
   {
     title: 'Full-Stack Software Development',
     text: 'From rough idea to a product people actually use, end to end. Like PLANIT//PRIMA, a data protection platform, and HIVESOUND, a voice assistant now serving 1,000+ beekeepers.',
-    stack: 'Frontend · Backend · Cloud · DevOps, in whatever stack the job needs. Currently TanStack and TypeScript heavy.',
   },
   {
     title: "AI that gets shit done",

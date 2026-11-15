@@ -34,10 +34,7 @@ const year = new Date().getFullYear();
         <h2 id="services-title">What I do</h2>
         <div class="list">
           {services.map((s) => (
-            <div class="item">
-              <span>{s.title}</span><span class="meta">{s.text}</span>
-              {s.stack && <span class="meta stack">{s.stack}</span>}
-            </div>
+            <div class="item"><span>{s.title}</span><span class="meta">{s.text}</span></div>
           ))}
         </div>
       </section>
