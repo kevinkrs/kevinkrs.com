@@ -38,7 +38,7 @@ export const experience: Row[] = [
   {
     org: 'HIVESOUND GmbH', title: 'Co-Founder & AI Lead', location: 'Hamburg', url: 'https://hivesound.ai',
     note: 'Built a voice AI assistant for beekeepers, bootstrapped the idea, won the AI Ideation, EXIST and InnoFounder scholarships, and now serves 1,000+ beekeepers. Trained anomaly detection models based on datasets of bee buzzing.',
-    stack: ['TypeScript', 'PyTorch', 'Flutter', 'LangGraph', 'GCP'],
+    stack: ['TypeScript', 'PyTorch', 'Flutter', 'LangGraph', 'MCP', 'GCP'],
   },
   {
     org: 'UKE', title: 'Scientific Research Assistant', location: 'Hamburg',
