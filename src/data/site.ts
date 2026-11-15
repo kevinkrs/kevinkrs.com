@@ -65,9 +65,9 @@ export const setup: { name: string; note?: string }[] = [
   { name: 'Caveman · Ponytail', note: 'Fewer tokens, smaller diffs' },
   { name: 'Claude Mem', note: 'Memory across sessions (experimental)' },
   { name: 'Herdr' },
-  { name: 'Hermes' },
   { name: 'Ghostty', note: 'Terminal' },
   { name: 'OrbStack', note: 'Containers' },
+  { name: 'Apple Notes · Apple Reminders', note: 'Keeping track of stuff' },
 ];
 
 export const education: Row[] = [

@@ -56,8 +56,8 @@ const year = new Date().getFullYear();
       ))}
 
       <section aria-labelledby="setup-title">
-        <h2 id="setup-title">My setup</h2>
-        <p class="lede">What I build with right now. Updated {setupUpdated}.</p>
+        <h2 id="setup-title">Current Setup</h2>
+        <p class="lede">Updated {setupUpdated}</p>
         <div class="list">
           {setup.map((t) => (
             <div class="item"><span>{t.name}</span>{t.note && <span class="meta">{t.note}</span>}</div>
