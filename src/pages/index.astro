@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Harbor from '../components/Harbor.astro';
 import Coffee from '../components/Coffee.astro';
-import { profile, intro, services, experience, education, type Row } from '../data/site';
+import { profile, intro, services, experience, education, setup, setupUpdated, type Row } from '../data/site';
 
 const lists: { id: string; title: string; rows: Row[] }[] = [
   { id: 'experience', title: 'Experience', rows: experience },
@@ -34,7 +34,10 @@ const year = new Date().getFullYear();
         <h2 id="services-title">What I do</h2>
         <div class="list">
           {services.map((s) => (
-            <div class="item"><span>{s.title}</span><span class="meta">{s.text}</span></div>
+            <div class="item">
+              <span>{s.title}</span><span class="meta">{s.text}</span>
+              {s.stack && <span class="meta stack">{s.stack}</span>}
+            </div>
           ))}
         </div>
       </section>
@@ -45,7 +48,7 @@ const year = new Date().getFullYear();
           <div class="list">
             {l.rows.map((r) => (
               <div class="item">
-                <span>{r.org}</span>
+                <span>{r.url ? <a href={r.url} rel="noopener">{r.org}</a> : r.org}</span>
                 <span class="meta">{r.title} · {r.location}</span>
                 {r.note && <span class="note">{r.note}</span>}
                 {r.stack && <span class="meta stack">{r.stack.join(' · ')}</span>}
@@ -54,6 +57,16 @@ const year = new Date().getFullYear();
           </div>
         </section>
       ))}
+
+      <section aria-labelledby="setup-title">
+        <h2 id="setup-title">My setup</h2>
+        <p class="lede">What I build with right now. Updated {setupUpdated}.</p>
+        <div class="list">
+          {setup.map((t) => (
+            <div class="item"><span>{t.name}</span>{t.note && <span class="meta">{t.note}</span>}</div>
+          ))}
+        </div>
+      </section>
 
       <section aria-labelledby="contact-title">
         <h2 id="contact-title">Get in touch</h2>
@@ -105,6 +118,7 @@ const year = new Date().getFullYear();
   .meta { color: var(--muted); font-family: var(--font); font-size: 0.8125rem; }
   .note { color: var(--muted); font-size: 0.9375rem; margin-top: 0.25rem; }
   .stack { margin-top: 0.25rem; }
+  .copy .lede { color: var(--muted); margin: -0.6rem 0 1.2rem; font-size: 0.9375rem; }
 
   .foot {
     display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 3.5rem; padding-top: 1.5rem;

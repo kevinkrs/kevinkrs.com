@@ -18,16 +18,17 @@ export const intro = [
 export const services = [
   {
     title: 'Full-Stack Software Development',
-    text: 'From rough idea to a product people actually use, end to end with Vue.js, React, Python and GCP. Like PLANIT//PRIMA, a data protection platform, and HIVESOUND, a voice assistant now serving 1,000+ beekeepers.',
+    text: 'From rough idea to a product people actually use, end to end. Like PLANIT//PRIMA, a data protection platform, and HIVESOUND, a voice assistant now serving 1,000+ beekeepers.',
+    stack: 'Frontend · Backend · Cloud · DevOps, in whatever stack the job needs. Currently TanStack and TypeScript heavy.',
   },
   {
     title: "AI that gets shit done",
-    text: 'AI in production, not in a demo. I trained ML models on real-world data at UKE and HIVESOUND, and shipped agentic pipelines to production at HIVESOUND and BCG Platinion.',
+    text: 'AI in production, not in a demo. I trained ML models on real-world data at UKE and HIVESOUND, and shipped agentic pipelines to production at HIVESOUND and BCG Platinion. And I set up coding harnesses like Claude Code with agentic orchestration, so AI writes code your team can trust.',
   },
 ];
 
-// Only organisation, position, location, an optional one-line note and tech stack are shown.
-export type Row = { org: string; title: string; location: string; note?: string; stack?: string[] };
+// Only organisation, position, location, an optional one-line note, tech stack and link are shown.
+export type Row = { org: string; title: string; location: string; note?: string; stack?: string[]; url?: string };
 
 export const experience: Row[] = [
   {
@@ -36,9 +37,9 @@ export const experience: Row[] = [
     stack: ['Python', 'Azure'],
   },
   {
-    org: 'HIVESOUND GmbH', title: 'Co-Founder & AI Lead', location: 'Hamburg',
+    org: 'HIVESOUND GmbH', title: 'Co-Founder & AI Lead', location: 'Hamburg', url: 'https://hivesound.ai',
     note: 'Built a voice AI assistant for beekeepers, bootstrapped the idea, won the AI Ideation, EXIST and InnoFounder scholarships, and now serves 1,000+ beekeepers. Trained anomaly detection models based on datasets of bee buzzing.',
-    stack: ['PyTorch', 'Flutter', 'LangGraph', 'GCP'],
+    stack: ['TypeScript', 'PyTorch', 'Flutter', 'LangGraph', 'GCP'],
   },
   {
     org: 'UKE', title: 'Scientific Research Assistant', location: 'Hamburg',
@@ -46,10 +47,28 @@ export const experience: Row[] = [
     stack: ['Python', 'PyTorch'],
   },
   {
+    org: 'PLANIT//PRIMA', title: 'Freelance Full-Stack Developer', location: 'Hamburg', url: 'https://www.planitprima.com/de/',
+    note: 'Co-developed a data protection platform, from first prototype to product.',
+    stack: ['Vue.js', 'Python'],
+  },
+  {
     org: 'Celver AG', title: 'Working Student, Data Engineering', location: 'Hamburg',
     note: 'Data pipelines and customer onboarding for a data analytics platform.',
     stack: ['Databricks', 'PySpark', 'Spark SQL', 'Azure'],
   },
+];
+
+// The tools I build with right now. Bump setupUpdated when you change the list.
+export const setupUpdated = 'November 2026';
+export const setup: { name: string; note?: string }[] = [
+  { name: 'Claude Code', note: 'Trimmed down, with most of its default context switched off' },
+  { name: "Matt Pocock's skills · HumanLayer skills", note: 'Repeatable workflows for planning, TDD and review' },
+  { name: 'Caveman · Ponytail', note: 'Fewer tokens, smaller diffs' },
+  { name: 'Claude Mem', note: 'Memory across sessions (experimental)' },
+  { name: 'Herdr' },
+  { name: 'Hermes' },
+  { name: 'Ghostty', note: 'Terminal' },
+  { name: 'OrbStack', note: 'Containers' },
 ];
 
 export const education: Row[] = [
