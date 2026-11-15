@@ -42,7 +42,7 @@ export const experience: Row[] = [
   },
   {
     org: 'UKE', title: 'Scientific Research Assistant', location: 'Hamburg',
-    note: 'Applied NLP research in clinical informatics, with a peer-reviewed publication.',
+    note: 'Applied NLP research in clinical informatics. First author of a peer-reviewed paper on a browser extension that records how clinicians use software in restricted hospital environments.',
     stack: ['Python', 'PyTorch'],
   },
   {
