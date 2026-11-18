@@ -2,7 +2,7 @@
 
 export const profile = {
   name: 'Kevin Kraus',
-  role: 'AI Product Engineer',
+  role: 'Product Engineer',
   pitch: 'I turn ideas into working software and help teams scale it, with AI built in properly.',
   location: 'Hamburg',
   email: 'hello@kevinkrs.com',
