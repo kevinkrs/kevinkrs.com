@@ -11,7 +11,7 @@ export const profile = {
 };
 
 export const intro = [
-  "I'm an engineer who turned a love for building things into a job. From rough idea to prototype to a product people use, I've been through that cycle many times, and starting something new still excites me every time. Today I do it full-time as a freelance engineer.",
+  "I'm a product engineer who turned a love for building things into a job. From rough idea to prototype to a product people use, I've been through that cycle many times, and starting something new still excites me every time.",
   "My path into AI started during my undergrad in Karlsruhe and took me through Seoul to Hamburg. Along the way I built deep expertise in machine learning, and for the last two years I've focused on agentic AI systems built on LLMs. With AI writing more and more of the code, software architecture matters more than ever. That's where I put most of my thinking: how a system is shaped, how it scales and how it stays maintainable.",
 ];
 
