@@ -21,7 +21,7 @@ const year = new Date().getFullYear();
       <h1 class="site-title"><span class="at">@</span>kevinkrs</h1>
 
       <section class="bio" aria-label="About">
-        <div class="bar"><span>{profile.name} · {profile.role}</span><span>{profile.location}</span></div>
+        <div class="bar"><span>{profile.name} · {profile.role}</span><span>Freelance · {profile.location}</span></div>
         {intro.map((p) => <p>{p}</p>)}
         <p class="links">
           <a class="cta" href={`mailto:${profile.email}`}>{profile.email}</a>
