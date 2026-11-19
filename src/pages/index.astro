@@ -126,7 +126,25 @@ const year = new Date().getFullYear();
   }
   .foot a { text-decoration: none; }
 
-  .visual { display: none; }
+  /* Phones and tablets: the painting sits fixed behind the page and tilts away as the content sheet slides over it. */
+  @media (max-width: 1023px) {
+    .shell { padding: 0; }
+    .visual { position: fixed; inset: 0 0 auto; height: 62svh; z-index: 0; overflow: hidden; perspective: 900px; background: var(--rule); }
+    .copy {
+      position: relative; z-index: 1; margin: 46svh auto 0; padding: 2rem var(--pad) 3rem;
+      background: var(--bg); border-radius: 22px 22px 0 0; box-shadow: 0 -12px 32px rgb(0 0 0 / 0.14);
+    }
+    /* Once the sheet is narrower than the screen, the painting shows at its sides, so it fills the screen. */
+    @media (min-width: 640px) { .visual { height: 100svh; } .copy { margin-top: 58svh; } }
+    @supports (animation-timeline: scroll()) {
+      @media (prefers-reduced-motion: no-preference) {
+        .visual :global(.harbor) { transform-origin: 50% 100%; animation: recede linear both; }
+        /* Separate rule: the minifier would fold the timeline into the shorthand, which browsers reject. */
+        .visual > :global(.harbor) { animation-timeline: scroll(root); animation-range: 0 50svh; }
+      }
+    }
+  }
+  @keyframes recede { to { transform: rotateX(14deg) scale(0.9) translateY(-4%); filter: brightness(0.8); } }
 
   @media (min-width: 1024px) {
     .shell {
