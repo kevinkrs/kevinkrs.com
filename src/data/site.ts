@@ -60,7 +60,7 @@ export const experience: Row[] = [
 
 export const awards: Row[] = [
   { org: 'Hamburg Innovation Awards', title: 'Winner, IDEA category, with HIVESOUND', location: '2024' },
-  { org: 'Gründungspreis', title: 'with HIVESOUND', location: 'October 2024' },
+  { org: 'Gründungspreis Digitale Innovationen', title: 'with HIVESOUND', location: 'October 2024' },
   { org: 'EXIST Gründerstipendium', title: 'Founder scholarship, Federal Ministry for Economic Affairs' },
   { org: 'InnoFounder', title: 'Founder scholarship, IFB Innovationsstarter Hamburg' },
 ];
