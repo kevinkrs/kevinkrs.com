@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Harbor from '../components/Harbor.astro';
 import Coffee from '../components/Coffee.astro';
 import { profile, intro, services, experience, education, awards, certifications, setup, setupUpdated, type Row } from '../data/site';
 
@@ -81,7 +82,7 @@ const year = new Date().getFullYear();
       </footer>
     </main>
 
-    <aside class="visual"><img src="/kevin.jpg" alt="Portrait of Kevin Kraus" width="1280" height="853" /></aside>
+    <aside class="visual"><Harbor /></aside>
   </div>
 </Base>
 
@@ -125,12 +126,7 @@ const year = new Date().getFullYear();
   }
   .foot a { text-decoration: none; }
 
-  @media (max-width: 1023px) {
-    .shell { display: flex; flex-direction: column; }
-    .copy { width: 100%; }
-    .visual { order: -1; width: 100%; max-width: 600px; margin: 0 auto 2rem; aspect-ratio: 1; border-radius: 10px; overflow: hidden; }
-  }
-  .visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .visual { display: none; }
 
   @media (min-width: 1024px) {
     .shell {
