@@ -8,6 +8,7 @@ export const profile = {
   email: 'hello@kevinkrs.com',
   linkedin: 'https://www.linkedin.com/in/kraus-kevin/',
   github: 'https://github.com/kevinkrs',
+  agency: 'https://agency-of-one.dev',
 };
 
 export const intro = [
