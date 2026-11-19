@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
-import Harbor from '../components/Harbor.astro';
 import Coffee from '../components/Coffee.astro';
-import { profile, intro, services, experience, education, setup, setupUpdated, type Row } from '../data/site';
+import { profile, intro, services, experience, education, awards, certifications, setup, setupUpdated, type Row } from '../data/site';
 
 const lists: { id: string; title: string; rows: Row[] }[] = [
   { id: 'experience', title: 'Experience', rows: experience },
   { id: 'education', title: 'Education', rows: education },
+  { id: 'awards', title: 'Awards & Scholarships', rows: awards },
+  { id: 'certifications', title: 'Certifications', rows: certifications },
 ];
 const year = new Date().getFullYear();
 ---
@@ -47,7 +48,7 @@ const year = new Date().getFullYear();
             {l.rows.map((r) => (
               <div class="item">
                 <span>{r.url ? <a href={r.url} rel="noopener">{r.org}</a> : r.org}</span>
-                <span class="meta">{r.title} · {r.location}</span>
+                <span class="meta">{r.title}{r.location && ` · ${r.location}`}</span>
                 {r.note && <span class="note">{r.note}</span>}
                 {r.stack && <span class="meta stack">{r.stack.join(' · ')}</span>}
               </div>
@@ -80,7 +81,7 @@ const year = new Date().getFullYear();
       </footer>
     </main>
 
-    <aside class="visual"><Harbor /></aside>
+    <aside class="visual"><img src="/kevin.jpg" alt="Portrait of Kevin Kraus" width="1280" height="853" /></aside>
   </div>
 </Base>
 
@@ -125,6 +126,7 @@ const year = new Date().getFullYear();
   .foot a { text-decoration: none; }
 
   .visual { display: none; }
+  .visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   @media (min-width: 1024px) {
     .shell {

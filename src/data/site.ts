@@ -12,7 +12,7 @@ export const profile = {
 };
 
 export const intro = [
-  "I'm a product engineer who turned a love for building things into a job. From rough idea to prototype to a product people use, I've been through that cycle many times, and starting something new still excites me every time.",
+  "I'm a product engineer with over five years in software engineering, and I turned a love for building things into my job. From rough idea to prototype to a product people use, I've been through that cycle many times, and starting something new still excites me every time.",
   "My path into AI started during my undergrad in Karlsruhe and took me through Seoul to Hamburg. Along the way I built deep expertise in machine learning, and for the last two years I've focused on agentic AI systems built on LLMs. With AI writing more and more of the code, software architecture matters more than ever. That's where I put most of my thinking: how a system is shaped, how it scales and how it stays maintainable.",
 ];
 
@@ -27,8 +27,8 @@ export const services = [
   },
 ];
 
-// Only organisation, position, location, an optional one-line note, tech stack and link are shown.
-export type Row = { org: string; title: string; location: string; note?: string; stack?: string[]; url?: string };
+// Only organisation, position, optional location, one-line note, tech stack and link are shown.
+export type Row = { org: string; title: string; location?: string; note?: string; stack?: string[]; url?: string };
 
 export const experience: Row[] = [
   {
@@ -56,6 +56,19 @@ export const experience: Row[] = [
     note: 'Data pipelines and customer onboarding for a data analytics platform.',
     stack: ['Databricks', 'PySpark', 'Spark SQL', 'Azure'],
   },
+];
+
+export const awards: Row[] = [
+  { org: 'Hamburg Innovation Awards', title: 'Winner, IDEA category, with HIVESOUND', location: '2024' },
+  { org: 'Gründungspreis', title: 'with HIVESOUND' },
+  { org: 'EXIST Gründerstipendium', title: 'Founder scholarship, Federal Ministry for Economic Affairs' },
+  { org: 'InnoFounder', title: 'Founder scholarship, IFB Innovationsstarter Hamburg' },
+];
+
+export const certifications: Row[] = [
+  { org: 'Microsoft Azure', title: 'Certification' },
+  { org: 'BCG', title: 'Certification' },
+  { org: 'Anthropic', title: 'Certification' },
 ];
 
 // The tools I build with right now. Bump setupUpdated when you change the list.
