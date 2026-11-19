@@ -66,9 +66,10 @@ export const awards: Row[] = [
 ];
 
 export const certifications: Row[] = [
-  { org: 'Microsoft Azure', title: 'Certification' },
-  { org: 'BCG', title: 'Certification' },
-  { org: 'Anthropic', title: 'Certification' },
+  { org: 'Claude Certified Architect – Foundations', title: 'Anthropic' },
+  { org: 'AI Fluency Ladder: AI Enterprise Builder', title: 'Boston Consulting Group', location: '2026' },
+  { org: 'AI Fluency Ladder: AI Multiplier', title: 'Boston Consulting Group', location: '2026' },
+  { org: 'Azure Data Fundamentals', title: 'Microsoft', location: '2022' },
 ];
 
 // The tools I build with right now. Bump setupUpdated when you change the list.
