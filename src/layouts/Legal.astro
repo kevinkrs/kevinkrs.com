@@ -1,0 +1,26 @@
+---
+import Base from './Base.astro';
+interface Props { title: string }
+const { title } = Astro.props;
+---
+
+<Base title={`${title} · Kevin Kraus`} description={`${title} for kevinkrs.com`} noindex>
+  <main class="legal">
+    <a class="back" href="/">← Kevin Kraus</a>
+    <h1>{title}</h1>
+    <div class="body"><slot /></div>
+  </main>
+</Base>
+
+<style>
+  .legal {
+    max-width: 44rem; margin: 0 auto; display: grid; gap: 24px;
+    padding: 72px max(24px, env(safe-area-inset-right)) 72px max(24px, env(safe-area-inset-left));
+  }
+  .back { font-size: 0.9375rem; color: var(--muted); text-decoration: none; }
+  h1 { font-size: 2rem; letter-spacing: -0.03em; }
+  .body { display: grid; gap: 16px; color: var(--muted); }
+  .body :global(h2) { color: var(--fg); font-size: 1rem; margin-top: 16px; }
+  .body :global(p) { margin: 0; }
+  .todo { color: var(--accent); }
+</style>
